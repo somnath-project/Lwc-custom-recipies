@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Button Card Section">
+        <div class="slds-m-around_medium">
+        <lightning-button variant="brand"
+                        label={onClickedButtonLabel}
+                        onclick={handleclick1}>
+    
+        </lightning-button>
+    </div>
+      </lightning-card>
+      
+      <template if:true = {cardVisible}>
+      <lightning-card title="if:true||false">
+        <div class="slds-m-around_medium">
+         {mytitle}
+        </div>
+      </lightning-card>
+
+      
+      </template>
+</template>

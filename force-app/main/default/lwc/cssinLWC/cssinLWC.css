@@ -1,0 +1,13 @@
+p{
+    color:red;
+    font-size:20px;
+}
+.User{
+    color:orange;
+    font-size:50px;
+    }
+
+    .User:hover{
+        color:blue;
+        font-size:60px;
+    }

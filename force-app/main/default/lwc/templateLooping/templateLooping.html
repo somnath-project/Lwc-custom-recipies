@@ -1,0 +1,28 @@
+<template>
+<lightning-card  title="For:Each Loop">
+<div class ="slds-var-m-around_medium">
+<template for:each={carList} for:item="carName">
+    <!--<div key={car}> {carName}</div> -->
+    <ul key={car} class="slds-has-dividers_around-space">
+        <li class="slds-item"> {carName}</li>
+        
+        </ul>
+
+</template>        
+</div>
+
+</lightning-card>
+
+<lightning-card title="For each demo by Noob">
+<template if:true={students.data}>
+    <template for:each={students.data} for:item="StudentName">
+        <h3 key={Id}>  {StudentName.Name}</h3>
+    </template>
+</template>
+
+<template if:false={students.error}>
+    {students.error}
+</template>
+</lightning-card>
+
+</template>
