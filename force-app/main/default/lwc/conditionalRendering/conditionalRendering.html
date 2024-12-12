@@ -1,36 +1,53 @@
 <template>
 
-    <lightning-card  title="Conditional rendering" >
-    <div class="slds-m-around_medium">
-    <lightning-button variant="brand" 
-    label="Show Data" 
-    title="Show Data" 
-    onclick={handleClick} 
-    class="slds-m-left_x-small"></lightning-button>
+<lightning-card  title="Conditional rendering" >
+<div class="slds-m-around_medium">
+<lightning-button variant="brand" 
+label="Show Data" 
+title="Show Data" 
+onclick={handleClick} 
+class="slds-m-left_x-small"></lightning-button>
 
-    <template if:true={isVisible}>
-        <div> Welcome to zero to hero series</div>
-    </template>
+<template if:true={isVisible}>
+    <div> Welcome to zero to hero series</div>
+</template>
 
-    <template if:false={isVisible}>
-        <div> You can not see the data ...please click on the button </div>
-    </template>
-    </div>
+<template if:false={isVisible}>
+    <div> You can not see the data ...please click on the button </div>
+</template>
+</div>
 
-    
-   <lightning-input type="text"
-    label="enter the hello word"
-     onkeyup={changeHandler} >
-    </lightning-input>
-   
-    <template if:true={helloMethod}>
-    <div> Hurray!...you have typed correctly</div>
-   </template>
+
+<lightning-input type="text"
+label="enter the hello word"
+    onkeyup={changeHandler} >
+</lightning-input>
+
+<template if:true={helloMethod}>
+<div> Hurray!...you have typed correctly</div>
+</template>
 </lightning-card>
-  
-  
 
+<!-- conditional rendring lwc:if/lwc:elseif -->
+<lightning-card title="Conditional Rendering LWC:if">
+<div class="slds-p-around_medium">
+    <lightning-input
+    type="checkbox"
+    label="Display Message"
+    name="input1"
+    onchange={handleChange}
+    ></lightning-input>
+</div>
 
-   
+<div class="slds-p-around_small">
+    <template lwc:if={displayMessage}>
+        <p> Welcome to learn conditional rendering</p>
+    </template>
+
+    <template lwc:else>
+        <p>You are not authorize to see this message</p>
+    </template>
+</div>
+</lightning-card>
 
 </template>

@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Render List">
+        <div class="slds-p-around_small">
+            <template for:each={superstar} for:item="star">
+                <p key={star}> {star}</p>
+            </template>
+
+            <!-- <template for:each={contactList} for:item="contact">
+                <p key={contact.id}> {contact.firstname} {contact.lastname}</p>
+
+            </template> -->
+        </div> 
+    </lightning-card>
+        <lightning-card title="complex data Render">
+            <div class="slds-p-aroud_small">
+                <template for:each={contactList} for:item="contact">
+                    <p key={contact.id}> {contact.firstname} {contact.lastname} </p>
+                </template>
+            </div>
+        </lightning-card>
+
+        <lightning-card title="iterator">
+
+        <div class="slds-p-around_small">
+            <template iterator:it={contactList}>
+                <div key={it.value.id}>
+                    <div lwc:if={it.first} class="list-first"></div>
+                    <p>{it.value.firstname} {it.value.lastname} </p>
+                    <div lwc:if={it.last} class="list-last"></div>
+                  
+                </div>
+            </template>
+        </div>
+
+        </lightning-card>
+    
+</template>
