@@ -1,5 +1,28 @@
 <template>
     <lightning-card title="dynamic css with query selector">
-        
+    <div class="slds-p-around_small">
+        <p class={pcolor}>welcome to dynamic css</p>
+        </div>
+        <div class="slds-var-p-around_small">
+            <lightning-button 
+            label="Add css" 
+            variant="brand" 
+            onclick={addCssHandler}
+            class="slds-var-p-around_small">
+        </lightning-button>
+        <lightning-button  
+        label="Remove css" 
+        variant="brand"
+        onclick={removeCssHandler}
+        class="slds-p-around_small">
+    </lightning-button>
+    <lightning-button 
+            label="toggle css" 
+            variant="brand" 
+            onclick={toggleCssHandler}
+            class="slds-p-around_small">
+        </lightning-button>
+           
+        </div>
     </lightning-card>
 </template>
