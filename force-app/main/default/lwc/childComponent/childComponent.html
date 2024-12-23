@@ -1,26 +1,23 @@
 <template>
-    <lightning-card title="Child Component">
-        <p><lightning-formatted-text 
-            value= {display}>
-          </lightning-formatted-text></p>
-         <div>
-            value= {displayFormat}
-         </div>
-       
-        
-
-        <p><lightning-formatted-text 
-            value= {user.firstName}>
+<lightning-card title="Child Component">
+    <div class="slds-p-around_small">
+    <p><lightning-formatted-text 
+        value= {display}>
         </lightning-formatted-text></p>
-       <p><lightning-formatted-text 
-            value= {user.LastName}>
-        </lightning-formatted-text></p>
-
-        <div>hello My child</div>
-       <p> BooleanValue = {isAvailable}</p>
-
-       <p><lightning-formatted-text 
-        value= {Hello}>
+        <div>
+        value= {displayFormat}
+        </div>
+    <p><lightning-formatted-text 
+        value= {user.firstName}>
     </lightning-formatted-text></p>
-    </lightning-card>
+    <p><lightning-formatted-text 
+        value= {user.LastName}>
+    </lightning-formatted-text></p>
+   <div>hello My child</div>
+    <p> BooleanValue = {isAvailable}</p>
+    <p><lightning-formatted-text 
+    value= {Hello}>
+</lightning-formatted-text></p>
+</div>
+</lightning-card>
 </template>
